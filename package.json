@@ -1,0 +1,28 @@
+{
+  "name": "react",
+  "version": "0.1.0",
+  "description": "Reaction bot for Slack",
+  "main": "react.js",
+  "repository": "https://github.com/strongdm/react-slackbot",
+  "author": "Ryan Castner <ryan@strongdm.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "prebuild": "yarn regen",
+    "build": "pkg react.js",
+    "regen": "node regenerate-channel-directory.js",
+    "format": "prettier --write --config package.json react.js lib"
+  },
+  "dependencies": {
+    "@slack/web-api": "^6.1.0",
+    "chalk": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "meow": "^9.0.0",
+    "plur": "^4.0.0",
+    "prettier": "^2.2.1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
